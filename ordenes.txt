@@ -1,0 +1,26 @@
+
+whoami: Te dice el usuario logeado.
+
+pwd : muestra el camino/path donde esta
+
+whereis: localizacion de la instalacion del paquete
+  ej: whereis cp
+
+rm: Siempre que se pueda usar rm -i, te pregunta si estas seguro de eliminar los archivos x
+
+-Diferencias entre comprimir y empaquetar==> tar empaqueta pero no comprime, solo los junta, lo ideal es comprimir con
+xz
+
+history: Muestra el historial de los comandos recibidos en al terminal
+
+who: Muestra quien/quienes estan logueados.
+
+du : Muestra el peso de cada uno de los ficheros del directorio donde estoy.
+
+cal: Muestra un calendario.
+
+find: Busca x archivo , con multiples opciones, necesita del path antes del tipo, importante respetar el tema de los espacios
+si no falla.Hace falta ponerle detras del exec [comando] {} /;
+
+La barra se pone para indicar el caracter especial ; para que no se coma las distintas flags de find, si no
+find \( -name "*.c" -o -name "*.txt" \) -exec mv {} *.cpp /;==> Si no se pone se come mv ... como opcion de find. 

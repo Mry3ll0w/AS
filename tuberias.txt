@@ -1,0 +1,11 @@
+
+Tuberias Existentes/Predeterminadas:
+  
+  STDIN, STDOUT, STDERR: Para conectar con las pipes todas las salidas se usa &> y no > solo, esto lo que hace es que 
+  ademas de las salidas de STDIN se concatenen con STDERR.
+
+  &>> Permite la ejecucion múltiple de las pipes, salida a multiples archivos.
+
+  Redirigiendo con descriptores: Los descriptores son canales de comunicacion.
+
+
