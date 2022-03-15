@@ -3,7 +3,7 @@
 
 ## Notas clase Tema 1
 
-  Dameon ==> Proceso en segundo plano
+  Daemeon ==> Proceso en segundo plano
 
   Autorizacion ==> Permiso para acceder a un recurso concreto.
 
