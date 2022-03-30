@@ -1,0 +1,26 @@
+1) Editar el vagrant file y el provision file, no tiene nada.
+
+2a) Comprobar que puertos tiene abiertos VM2 desde VM1
+    Para escanear los puertos abiertos usaremos el comando 
+    "sudo nmap --open 192.168.2.102"
+    --open ==> Nos sirve para poder filtrar solo aquellos puertos que esten abiertos, el resto.
+
+2b) Prohibir el acceso desde ssh a vm2
+
+    Usaremos iptables para restringir los accesos al puerto desde el que se accede a 
+    ssh.
+
+    sudo iptables -A INPUT -p tcp --dport 22 -j REJECT
+    
+    Usando esto se bloquea la pantalla de la terminal de vm2, ya que estamos conectados por el puerto
+    22 (ssh a través de TCP).
+    Opciones:
+        -A==> Con esta opción le indicamos el flujo que se ve afectado por la regla INPUT , ya que se 
+        accede a ssh desde "fuera"
+
+        -p ==> Le indicamos el protocolo de conexion (en este caso TCP, ya que ssh va a través de este).
+
+        --dport ==> Indicamos el puerto al que afecta, en este caso el 22.
+
+        -j ==> Especificamos la regla que le vamos a aplicar, en este caso, REJECT para no permitir el 
+        acceso y notificar que se ha rechazado la conexion, con DROP sería válido. 
