@@ -24,3 +24,8 @@
 
         -j ==> Especificamos la regla que le vamos a aplicar, en este caso, REJECT para no permitir el 
         acceso y notificar que se ha rechazado la conexion, con DROP sería válido. 
+
+3)
+	a) Permitir conexiones locales: sudo iptables -A INPUT -s localhost -j ACCEPT
+	b) Permitir conexiones ya establecidas: sudo iptables -A INPUT -j ACCEPT -m conntrack --ctstate ESTABLISHED
+	c) Politica por defecto para rechazar paquetes entrantes: sudo iptables -P INPUT DROP
