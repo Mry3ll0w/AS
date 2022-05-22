@@ -1,0 +1,4 @@
+nameserver [ip_servidor] en la parte superior
+
+CHECKCONF del named.conf.local
+named-checkconf -z named.conf.local
